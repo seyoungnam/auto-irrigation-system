@@ -8,7 +8,7 @@ String epass = "<your-wifi-password>";
 
 // splunk settings and http collector token
 String collectorToken = "<your-collector-token>";
-String splunkIndexer = "127.0.0.1";
+String splunkIndexer = "<your splunk enterprise host name>"; // "seyoungs-macbook-pro.local"
 String eventData="";
 
 //you need a different client per board
