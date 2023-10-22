@@ -18,7 +18,7 @@ This tutorial consists of four parts.
 
 For simplicity, we only need a moisture sensor, a nodeMCU module, and a relay module.
 
-> It is required to connect a motor pump with a relay module in the end. We will cover this part later.
+> It is required to connect a motor pump with a relay module in the end. We will update this page with the motor pump connection tutorial later.
 
 ### How to connect
 
@@ -33,12 +33,12 @@ For simplicity, we only need a moisture sensor, a nodeMCU module, and a relay mo
 
 Plese refer to the ESP8266 NodeMCU kit pinout diagram below to find the right pin to connect.
 
-<img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png?w=817&quality=100&strip=all&ssl=1" width="300" >
+<img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png?w=817&quality=100&strip=all&ssl=1" width="600" >
 
 
 The outcome of connected Arduino components look like below.
 
-<img src="./src/arduino-connected.jpeg" width="300">
+<img src="./src/arduino-connected.jpeg" width="600">
 
 
 ## 2. Set up Arduino IDE and VCP driver
@@ -52,7 +52,7 @@ The outcome of connected Arduino components look like below.
 4. Download the library for ESP8266
    - Go to **Tools** > **Board** > **Board Manager...** > Type "esp8266"
    - Install the **esp8266** library written by ESP8266 Community
-   - <img src="./src/esp8266-library.jpeg" width="500">
+   - <img src="./src/esp8266-library.jpeg" width="700">
 5. Set up cofigurations to run your code on the ESP8266 nodeMCU
    - Select **Tools** > **Board** > **esp8266** > **NodeMCU 1.0 (ESP-12E Module)**
    - Select **Tools** > **Flash Size** > **4MB (FS:3MB OTA:~512KB)**
@@ -74,16 +74,16 @@ The outcome of connected Arduino components look like below.
    - Follow [the official instructions](https://docs.splunk.com/Documentation/Splunk/9.1.1/Data/UsetheHTTPEventCollector?ref=hk#Create_an_Event_Collector_token_on_Splunk_Enterprise)
    - **WARNING**: do not click the **Enable indexer acknowledgment** checkbox
    - Please take my token setting as reference
-   - <img src="./src/token-setting.jpg" width="300">
+   - <img src="./src/token-setting.jpg" width="600">
    - To use the token, go to **Settings** > **Data inputs** > **HTTP Event Collector** > **Actions** column > click **Enable**
    - Copy the token value to `collectorToken` var on line 10 in `watering-splunk.ino`
 3. Enable HTTP Event Collector on Splunk Enterprise
    - Follow [the official instructions](https://docs.splunk.com/Documentation/Splunk/9.1.1/Data/UsetheHTTPEventCollector?ref=hk#Enable_HTTP_Event_Collector_on_Splunk_Enterprise)
    - Please take my token setting as reference
-   - <img src="./src/hec-global-setting.jpeg" width="300">
+   - <img src="./src/hec-global-setting.jpeg" width="600">
 
 
-# 4. Send data from Arduino to Splunk
+## 4. Send data from Arduino to Splunk
 
 1. In the Arduino IDE sketch board
    - Type the correct wifi id and password on line 5 and 6
@@ -91,14 +91,14 @@ The outcome of connected Arduino components look like below.
    - Click the "check" button on the top left corner of thethe Arduino sketch board to verify the code
    - Click the "right arrow" button on the top left corner of the Arduino sketch board to upload  and run the code
    - Click the "Serial Monitor" button on the top right corner. Confirm that wifi connection is successfully established and HTTP response code marks 200.
-   - <img src="./src/wifi-connected.jpeg" width="500">
+   - <img src="./src/wifi-connected.jpeg" width="1000">
 
 2. In Splunk Enterprise
    - Click **splunk>enterprise** logo on the top left corner
    - Choose **Search & Reporting** on the left menu
    - Type `index="auto-irrigation"` in the search bar and hit enter
    - Confirm the log data is stored and retrieved in Splunk Enterprise
-   - <img src="./src/se-search.jpeg" width="500">
+   - <img src="./src/se-search.jpeg" width="900">
 
 
    
