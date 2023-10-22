@@ -1,20 +1,18 @@
-# auto-irrigation-system
-
 What is Arduino?
 -	It is an open-source electronic prototyping platform enabling users to create interactive electronic objects, such as humidifier or thermometer
 -	Hardware: Microcontroller (Small controller like a computer)
 -	Software: Arduino IDE
+-	Most common version of Arduino is Arduino UNO.
+-	Arduino Programs are called SKETCH.
 
-It reads INPUT
-You can check the staus of INPUT by seeing the LED light
-TURN ON the light of a SENSOR
-TURN INTO the OUTPUT
-TURN ON LED light
+How does it work?
+-	It reads INPUT
+-	You can check the staus of INPUT by seeing the LED light
+-	TURN ON the light of a SENSOR
+-	TURN INTO the OUTPUT
+-	TURN ON LED light
 
 You can connect it to whatever you want to detect the humidity, such as the room temperature, plant watering system, etc.
-
-Most common version of Arduino is Arduino UNO.
-Arduino Programs are called SKETCH.
 
 How does BLINK work?
 Examples < Basics < Blink
