@@ -9,7 +9,7 @@ This document provides a step-by-step tutorial on how to send soil moisture data
 This tutorial consists of four parts.
 
 1. Set up Arduino components
-2. Set up Arduino IDE and VCP driver
+2. Set up Arduino IDE
 3. Set up Splunk on your laptop
 4. Send data from Arduino to Splunk
 
@@ -41,7 +41,7 @@ The outcome of connected Arduino components look like below.
 <img src="./src/arduino-connected.jpeg" width="600">
 
 
-## 2. Set up Arduino IDE and VCP driver
+## 2. Set up Arduino IDE
 
 1. Download & install the Arduino IDE([official website](https://www.arduino.cc/en/software))
 2. Open code
@@ -59,8 +59,6 @@ The outcome of connected Arduino components look like below.
    - Select **Tools** > **CPU Frequency** > **80 MHz**
    - Select **Tools** > **Upload Speed** -> **921600**
    - Select **Tools** > **Port** > **/dev/cu.usbserial-0001** (whatever port that pops up when your ESP8266 nodeMCU is connected to your laptop)
-6. Install VCP driver
-   - Download a driver file relevant to your OS in the [Silicon Labs website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) and install it
 
 
 ## 3. Set up Splunk on your laptop
